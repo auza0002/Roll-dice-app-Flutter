@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:roll_dice_app/dice_roller.dart';
-import 'package:roll_dice_app/text_style.dart';
 
 Alignment? exampleVariable;
 
@@ -22,7 +21,6 @@ class GradientContainer extends StatelessWidget {
         ),
       ),
       child: const Center(
-        // child: TextStyleWidget("passing values"),
         child: DiceRoller(),
       ),
     );
