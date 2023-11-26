@@ -10,11 +10,12 @@ class DiceRoller extends StatefulWidget {
 
 class _DiceRollerState extends State<DiceRoller> {
   var activeDiceImage = "assets/images/dice-1.png";
+  var currentDiceRoll = 2;
 
   void rollDice() {
-    var diceRoll = Random().nextInt(6) + 1;
     setState(() {
-      activeDiceImage = "assets/images/dice-$diceRoll.png";
+      currentDiceRoll = Random().nextInt(6) + 1;
+      activeDiceImage = "assets/images/dice-$currentDiceRoll.png";
     });
   }
 
