@@ -9,10 +9,10 @@ import 'package:roll_dice_app/gradient_container.dart';
 //
 
 main() {
-  runApp(const MaterialApp(
+  runApp(MaterialApp(
     home: Scaffold(
       backgroundColor: Colors.blue,
-      body: GradientContainer(),
+      body: GradientContainer([Colors.blue.shade500, Colors.red.shade200]),
     ),
   ));
 }

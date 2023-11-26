@@ -1,26 +1,29 @@
 import 'package:flutter/material.dart';
+import 'package:roll_dice_app/dice_roller.dart';
 import 'package:roll_dice_app/text_style.dart';
 
-var startAlignment = Alignment.topCenter;
-var endAlignmet = Alignment.bottomCenter;
+Alignment? exampleVariable;
 
-// this valu con change in the furture, and if I have const at the main container
-// it means those values may change and flutter can not saves them.
+const startAlignment = Alignment.topCenter;
+const endAlignmet = Alignment.bottomCenter;
 
 class GradientContainer extends StatelessWidget {
-  const GradientContainer({super.key});
+  const GradientContainer(this.listOfColors, {super.key});
+  final List<Color> listOfColors;
 
   @override
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
         gradient: LinearGradient(
-            begin: startAlignment,
-            end: endAlignmet,
-            colors: [Colors.blue.shade700, Colors.grey.shade700]),
+          begin: startAlignment,
+          end: endAlignmet,
+          colors: listOfColors,
+        ),
       ),
       child: const Center(
-        child: TextStyleWidget(),
+        // child: TextStyleWidget("passing values"),
+        child: DiceRoller(),
       ),
     );
   }
